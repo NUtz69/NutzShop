@@ -163,6 +163,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\BundleConfig2.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -170,6 +171,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -238,6 +240,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Data\" />
+    <Folder Include="Views\ProductManager\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -251,6 +255,24 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NutzShop.Core\NutzShop.Core.csproj">
+      <Project>{a4d8ce29-b79b-44e4-a549-b137e7012d57}</Project>
+      <Name>NutzShop.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NutzShop.DataAccess.InMerory\NutzShop.DataAccess.InMerory.csproj">
+      <Project>{0b31ddec-cef1-4eba-a8e6-5465b52f6261}</Project>
+      <Name>NutzShop.DataAccess.InMerory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NutzShop.DataAccess.SQL\NutzShop.DataAccess.SQL.csproj">
+      <Project>{8bca0520-3e2b-429d-a45e-067e8a53119c}</Project>
+      <Name>NutzShop.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NutzShop.Services\NutzShop.Services.csproj">
+      <Project>{5cc07a39-f052-4b80-96cf-eaf97b497605}</Project>
+      <Name>NutzShop.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
