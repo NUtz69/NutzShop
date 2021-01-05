@@ -31,6 +31,7 @@ GIT: 002.BaseProject
 
 Nuget
 6.	Solution ‘NutzShop’ -> Manage NuGet Packages -> Updates
+
 7.	Except Bootstrap
 
 GIT: 003.ModelsAndStorage
