@@ -1,6 +1,7 @@
 # NutzShop
 
 GIT: Change -> Master
+
 GIT: Git Repository -> Master -> Merge
 
 GIT: 001.InitalSetup
