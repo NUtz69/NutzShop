@@ -7,6 +7,7 @@ GIT: Git Repository -> Master -> Merge
 GIT: 001.InitalSetup
 
 SETUP
+
 Setup
 1.	CORE
 •	Project -> Empty Project (.NET Framework) -> Blank
@@ -30,13 +31,14 @@ Setup
 GIT: 002.BaseProject
 
 Nuget
-6.	Solution ‘NutzShop’ -> Manage NuGet Packages -> Updates
 
+6.	Solution ‘NutzShop’ -> Manage NuGet Packages -> Updates
 7.	Except Bootstrap
 
 GIT: 003.ModelsAndStorage
 
 MODELS
+
 MyShop.Core
 1.	Add new folder -> Models
 2.	Add new class -> Product 
@@ -44,6 +46,7 @@ MyShop.Core
 4.	using System.ComponentModel.DataAnnotations;
 
 INMEMORY
+
 MyShop.DataAccess.InMemory
 1.	Reference -> Add -> Assemblies -> System.Runtime.Caching
 2.	Projects -> Solution -> Add -> MyShop.Core
