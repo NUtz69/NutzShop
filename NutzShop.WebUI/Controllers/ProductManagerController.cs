@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using NutzShop.Core.Models;
-using NutzShop.DataAccess.InMemory;
+using NutzShop.DataAccess.InMerory;
 
 namespace NutzShop.WebUI.Controllers
 {
