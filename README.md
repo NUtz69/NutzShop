@@ -55,6 +55,7 @@ GIT: 004.ProductManagementPages
 CONTROLLERS
 
 MyShop.WebUI
+
 ProductManager
 1.	Controllers -> Add Controllers -> MVC 5 Controller – Empty -> ProductManagerController
 2.	Reference -> Add -> All - Except Test
