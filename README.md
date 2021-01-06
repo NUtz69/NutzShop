@@ -1,9 +1,5 @@
 # NutzShop
 
-GIT: Change -> 003. …
-
-GIT: Git Repository -> Master -> Merge
-
 GIT: 001.InitalSetup
 
 SETUP
@@ -53,3 +49,21 @@ MyShop.DataAccess.InMemory
 3.	Add new class -> ProductRepository
 4.	using System.Runtime.Caching;
 5.	using MyShop.Core.Models;
+
+GIT: 004.ProductManagementPages
+
+CONTROLLERS
+
+MyShop.WebUI
+ProductManager
+1.	Controllers -> Add Controllers -> MVC 5 Controller – Empty -> ProductManagerController
+2.	Reference -> Add -> All - Except Test
+3.	using MyShop.Core.Models
+4.	using MyShop.DataAccess.InMemory;
+5.	Index -> Add view -> Template = List -> Model class = Product (MyShop.Core.Models)
+6.	Index.cshtml -> @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+7.	Create -> ActionResult -> Add view -> Template = Create -> Model class = Product (MyShop.Core.Models)
+8.	Edit -> ActionResult -> Add view -> Template = Edit -> Model class = Product (MyShop.Core.Models)
+9.	Delete -> Add view -> Template = Delete -> Model class = Product (MyShop.Core.Models)
+10.	Shared -> _Layout.csHtml -> Add -> <li>@Html.ActionLink("Product Admin", "Index", "ProductManager")</li>
+11.	Solution ‘NutzShop’ -> Manage NuGet Packages -> Downgrade Microsoft.CodeDom.Providers.DotNetCompilerPlatform -> 2.0.1
