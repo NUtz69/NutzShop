@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutzShop.Services", "NutzSh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutzShop.DataAccess.SQL", "NutzShop.DataAccess.SQL\NutzShop.DataAccess.SQL.csproj", "{8BCA0520-3E2B-429D-A45E-067E8A53119C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutzShop.DataAccess.InMerory", "NutzShop.DataAccess.InMerory\NutzShop.DataAccess.InMerory.csproj", "{0B31DDEC-CEF1-4EBA-A8E6-5465B52F6261}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutzShop.DataAccess.InMemory", "NutzShop.DataAccess.InMerory\NutzShop.DataAccess.InMemory.csproj", "{0B31DDEC-CEF1-4EBA-A8E6-5465B52F6261}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutzShop.WebUI", "NutzShop.WebUI\NutzShop.WebUI.csproj", "{D450F7B2-5045-418E-BD5F-210C20E8C7AC}"
 EndProject

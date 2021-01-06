@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Runtime.Caching;
 using NutzShop.Core.Models;
 
-namespace NutzShop.DataAccess.InMerory
+namespace NutzShop.DataAccess.InMemory
 {
     public class ProductRepository
     {
