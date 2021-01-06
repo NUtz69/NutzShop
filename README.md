@@ -1,6 +1,6 @@
 # NutzShop
 
-GIT: Change -> Master
+GIT: Change -> Master -> Push
 
 GIT: Git Repository -> Master -> Merge
 
