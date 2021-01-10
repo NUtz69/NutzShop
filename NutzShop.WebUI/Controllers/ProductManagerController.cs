@@ -4,7 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using NutzShop.Core.Models;
+using NutzShop.Core.ViewModels;
 using NutzShop.DataAccess.InMemory;
+using NutzShop.DataAccess.InMerory;
 
 namespace NutzShop.WebUI.Controllers
 {
@@ -12,11 +14,13 @@ namespace NutzShop.WebUI.Controllers
     {
         // Var
         ProductRepository context;
+        ProductCategoryRepository productCategories;
 
         // Constructors
         public ProductManagerController()
         {
             context = new ProductRepository();
+            productCategories = new ProductCategoryRepository();
         }
 
         // GET: ProductManager
@@ -31,9 +35,11 @@ namespace NutzShop.WebUI.Controllers
         // Create
         public ActionResult Create()
         {
-            Product product = new Product();
+            ProductManagerViewModel viewModel = new ProductManagerViewModel();
+            viewModel.Product = new Product();
+            viewModel.ProductCategories = productCategories.Collection(); // Database
 
-            return View(product);
+            return View(viewModel);
         }
 
         [HttpPost]
@@ -62,7 +68,11 @@ namespace NutzShop.WebUI.Controllers
             }
             else
             {
-                return View(product);
+                ProductManagerViewModel viewModel = new ProductManagerViewModel();
+                viewModel.Product = product;
+                viewModel.ProductCategories = productCategories.Collection();
+
+                return View(viewModel);
             }
         }
 
