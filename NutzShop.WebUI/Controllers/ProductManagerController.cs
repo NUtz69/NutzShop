@@ -13,14 +13,14 @@ namespace NutzShop.WebUI.Controllers
     public class ProductManagerController : Controller
     {
         // Var
-        ProductRepository context;
-        ProductCategoryRepository productCategories;
+        InMemoryRepository<Product> context;
+        InMemoryRepository<ProductCategory> productCategories;
 
         // Constructors
         public ProductManagerController()
         {
-            context = new ProductRepository();
-            productCategories = new ProductCategoryRepository();
+            context = new InMemoryRepository<Product>();
+            productCategories = new InMemoryRepository<ProductCategory>();
         }
 
         // GET: ProductManager
@@ -36,6 +36,7 @@ namespace NutzShop.WebUI.Controllers
         public ActionResult Create()
         {
             ProductManagerViewModel viewModel = new ProductManagerViewModel();
+            //Product product = new Product();
             viewModel.Product = new Product();
             viewModel.ProductCategories = productCategories.Collection(); // Database
 
@@ -133,5 +134,6 @@ namespace NutzShop.WebUI.Controllers
                 return RedirectToAction("Index");
             }
         }
+
     }
 }
