@@ -12,12 +12,12 @@ namespace NutzShop.WebUI.Controllers
     public class ProductCategoryManagerController : Controller
     {
         // Var
-        ProductCategoryRepository context;
+        InMemoryRepository<ProductCategory> context;
 
         // Constructors
         public ProductCategoryManagerController()
         {
-            context = new ProductCategoryRepository();
+            context = new InMemoryRepository<ProductCategory>();
         }
 
         // GET: ProductCategoryManager

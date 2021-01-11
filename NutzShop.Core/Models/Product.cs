@@ -8,11 +8,9 @@ using System.Threading.Tasks;
 
 namespace NutzShop.Core.Models
 {
-    public class Product
+    public class Product : BaseEntity
     {
         // Vars
-        public string Id { get; set; }
-
         [StringLength(20)]
         [DisplayName("Product Name")]
         public string Name { get; set; }
@@ -24,11 +22,5 @@ namespace NutzShop.Core.Models
 
         public string Category { get; set; }
         public string Image { get; set; }
-
-        // Constructors
-        public Product()
-        {
-            this.Id = Guid.NewGuid().ToString();
-        }
     }
 }
