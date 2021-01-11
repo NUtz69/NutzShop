@@ -74,6 +74,7 @@ GIT: 005.ProductGrouping
 ProductCategoryManager
 1.	MyShop.Core -> Models -> Add new class -> ProductCategory
 2.	Controllers -> Add Controllers -> MVC 5 Controller – Empty -> ProductCategoryManagerController
+
 MyShop.DataAccess.InMemory
 1.	Add new class -> ProductCategoryRepository
 
