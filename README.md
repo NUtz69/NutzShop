@@ -78,7 +78,8 @@ ProductCategoryManager
 MyShop.DataAccess.InMemory
 1.	Add new class -> ProductCategoryRepository
 
-ProductCategoryManagerController 
+ProductCategoryManagerController
+
 3.	Index -> Add view -> Template = List -> Model class = ProductCategory (MyShop.Core.Models)
 4.	Index.cshtml -> @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
 5.	Create -> Add view -> Template = Create -> Model class = ProductCategory (MyShop.Core.Models)
