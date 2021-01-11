@@ -68,3 +68,26 @@ ProductManager
 9.	Delete -> Add view -> Template = Delete -> Model class = Product (MyShop.Core.Models)
 10.	Shared -> _Layout.csHtml -> Add -> <li>@Html.ActionLink("Product Admin", "Index", "ProductManager")</li>
 11.	Solution ‘NutzShop’ -> Manage NuGet Packages -> Downgrade Microsoft.CodeDom.Providers.DotNetCompilerPlatform -> 2.0.1
+
+GIT: 005.ProductGrouping
+
+ProductCategoryManager
+1.	MyShop.Core -> Models -> Add new class -> ProductCategory
+2.	Controllers -> Add Controllers -> MVC 5 Controller – Empty -> ProductCategoryManagerController
+MyShop.DataAccess.InMemory
+1.	Add new class -> ProductCategoryRepository
+
+ProductCategoryManagerController 
+3.	Index -> Add view -> Template = List -> Model class = ProductCategory (MyShop.Core.Models)
+4.	Index.cshtml -> @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+5.	Create -> Add view -> Template = Create -> Model class = ProductCategory (MyShop.Core.Models)
+6.	Edit -> Add view -> Template = Edit -> Model class = ProductCategory (MyShop.Core.Models)
+7.	Delete -> Add view -> Template = Delete -> Model class = ProductCategory (MyShop.Core.Models)
+8.	_Layout.csHtml -> Add -> <li>@Html.ActionLink("Category Admin", "Index", "ProductCategoryManager")</li>
+
+ViewModels
+1.	MyShop.Core -> Add new dir -> ViewModels
+2.	MyShop.Core -> ViewModels -> Add new class -> ProductManagerViewModel
+3.	Edit -> WebUI -> Controller -> ProductManagerController -> Create & Edit
+4.	WebUI -> Views -> ProductManager -> Edit -> Create.cshtml -> MyShop.Core.ViewModels.ProductManagerViewModel
+5.	WebUI -> Views -> ProductManager -> Edit -> Edit.cshtml -> MyShop.Core.ViewModels.ProductManagerViewModel
