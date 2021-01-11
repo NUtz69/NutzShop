@@ -93,3 +93,24 @@ ViewModels
 3.	Edit -> WebUI -> Controller -> ProductManagerController -> Create & Edit
 4.	WebUI -> Views -> ProductManager -> Edit -> Create.cshtml -> MyShop.Core.ViewModels.ProductManagerViewModel
 5.	WebUI -> Views -> ProductManager -> Edit -> Edit.cshtml -> MyShop.Core.ViewModels.ProductManagerViewModel
+
+GIT: 006.Generics
+
+GENERICS
+
+MyShop.DataAccess.InMemory
+1.	Add new class -> InMemoryRepository
+
+MyShop.Core
+1.	Models -> Add new class -> BaseEntity
+2.	public abstract class BaseEntity
+
+MyShop.WebUI
+1.	Edit -> Controllers -> ProductManagerController
+2.	Edit -> Controllers -> ProductCategoryManagerController
+
+MyShop.Core
+1.	Edit -> Models -> Product.cs
+2.	public class Product : BaseEntity 
+3.	Edit -> Models -> ProductCategory.cs
+4.	public class ProductCategory : BaseEntity 
