@@ -114,3 +114,27 @@ MyShop.Core
 2.	public class Product : BaseEntity 
 3.	Edit -> Models -> ProductCategory.cs
 4.	public class ProductCategory : BaseEntity 
+
+GIT: 007.DependencyInjection
+
+DEPENDENCY INJECTION
+
+MyShop.DataAccess.InMemory
+1.	Edit -> InMemoryRepository.cs
+2.	Public class InMemoryRepository -> Extract Interface
+3.	IInMemoryRepository -> rename -> IRepository.cs
+4.	IRepository.cs  -> rename -> class -> IRepository
+5.	InMemoryRepository -> rename -> class -> IRepository
+
+MyShop.Core
+1.	Add dir -> Contracts
+2.	Drag&drop -> MyShop.DataAccess.InMemory -> IRepository.cs -> + delete
+3.	Edit -> IRepository.cs -> namespace MyShop.Core.Contracts
+4.	MyShop.DataAccess.InMemory -> InMemoryRepository -> Quick -> IRepository
+
+MyShop.WebUI
+5.	Edit -> Controllers ->  ProductManagerController.cs -> IRepository
+6.	Edit -> Controllers ->  ProductManagerController.cs -> public ProductManagerController(IRepository<Product> productContext, IRepository<ProductCategory> productCategoryContext)
+7.	Constructors -> context = productContext;
+8.	Constructors -> productCategories = productCategoryContext;
+9.	Edit -> ProductCategoryManagerController.cs
