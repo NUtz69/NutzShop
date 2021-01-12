@@ -137,4 +137,4 @@ MyShop.WebUI
 6.	Edit -> Controllers ->  ProductManagerController.cs -> public ProductManagerController(IRepository<Product> productContext, IRepository<ProductCategory> productCategoryContext)
 7.	Constructors -> context = productContext;
 8.	Constructors -> productCategories = productCategoryContext;
-9.	Edit -> ProductCategoryManagerController.cs
+9.	Edit -> ProductCategoryManagerController.cs -> Constructors
