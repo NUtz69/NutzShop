@@ -1,4 +1,5 @@
-﻿using NutzShop.Core.Models;
+﻿using NutzShop.Core.Contracts;
+using NutzShop.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace NutzShop.DataAccess.InMerory
 {
-    public class InMemoryRepository<T> where T : BaseEntity
+    public class InMemoryRepository<T> : IRepository<T> where T : BaseEntity
     {
         // Var
         ObjectCache cache = MemoryCache.Default;

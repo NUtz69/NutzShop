@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using NutzShop.Core.Contracts;
 using NutzShop.Core.Models;
 using NutzShop.Core.ViewModels;
-using NutzShop.DataAccess.InMemory;
 using NutzShop.DataAccess.InMerory;
 
 namespace NutzShop.WebUI.Controllers
@@ -13,14 +13,14 @@ namespace NutzShop.WebUI.Controllers
     public class ProductManagerController : Controller
     {
         // Var
-        InMemoryRepository<Product> context;
-        InMemoryRepository<ProductCategory> productCategories;
+        IRepository<Product> context;
+        IRepository<ProductCategory> productCategories;
 
         // Constructors
-        public ProductManagerController()
+        public ProductManagerController(IRepository<Product> productContext, IRepository<ProductCategory> productCategoryContext)
         {
-            context = new InMemoryRepository<Product>();
-            productCategories = new InMemoryRepository<ProductCategory>();
+            context = productContext;
+            productCategories = productCategoryContext;
         }
 
         // GET: ProductManager
