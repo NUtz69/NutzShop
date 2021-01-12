@@ -133,6 +133,7 @@ MyShop.Core
 4.	MyShop.DataAccess.InMemory -> InMemoryRepository -> Quick -> IRepository
 
 MyShop.WebUI
+
 5.	Edit -> Controllers ->  ProductManagerController.cs -> IRepository
 6.	Edit -> Controllers ->  ProductManagerController.cs -> public ProductManagerController(IRepository<Product> productContext, IRepository<ProductCategory> productCategoryContext)
 7.	Constructors -> context = productContext;
