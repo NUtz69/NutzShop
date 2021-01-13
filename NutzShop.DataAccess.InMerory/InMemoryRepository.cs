@@ -7,7 +7,7 @@ using System.Runtime.Caching;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NutzShop.DataAccess.InMerory
+namespace NutzShop.DataAccess.InMemory
 {
     public class InMemoryRepository<T> : IRepository<T> where T : BaseEntity
     {

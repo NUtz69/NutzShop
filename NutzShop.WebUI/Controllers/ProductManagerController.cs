@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using NutzShop.Core.Contracts;
 using NutzShop.Core.Models;
 using NutzShop.Core.ViewModels;
-using NutzShop.DataAccess.InMerory;
+using NutzShop.DataAccess.InMemory;
 
 namespace NutzShop.WebUI.Controllers
 {
