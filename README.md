@@ -139,3 +139,28 @@ MyShop.WebUI
 7.	Constructors -> context = productContext;
 8.	Constructors -> productCategories = productCategoryContext;
 9.	Edit -> ProductCategoryManagerController.cs -> Constructors
+
+GIT: 009.EntityFramework
+
+ENTITY
+
+Solution ‘MyShop’
+1.	Manage NuGet Packages -> EntityFramework -> MyShop.DataAccess.SQL -> install
+
+MyShop.WebUI
+1.	Edit -> Web.config -> name="DefaultConnection"
+
+MyShop.DataAccess.SQL
+1.	Add new class -> DataContext.cs
+2.	Copy MyShop.WebUI:Web.config -> <connectionString> TO MyShop.DataAccess.SQL:App.config BEFORE <configSections>
+3.	Edit -> DataContext.cs  -> Add references ->  using NutzShop.Core
+4.	--
+5.	Visual studio -> View -> Other windows -> Package manager console
+6.	Default project: NutzShop.DataAccess.SQL
+7.	MyShop.WebUI -> Set as startup project
+8.	Enable-Migrations
+9.	Add-Migration Initial
+10.	Update-Database
+
+Microsoft SQL Sever Management Studio
+1.	NutzShop -> Tables -> __MigrationHistory -> edit
