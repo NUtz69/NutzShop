@@ -164,3 +164,14 @@ MyShop.DataAccess.SQL
 
 Microsoft SQL Sever Management Studio
 1.	NutzShop -> Tables -> __MigrationHistory -> edit
+
+GIT: 010.SQLRepository
+
+SQLRepository
+
+MyShop.DataAccess.SQL
+1.	Add new class -> SQLRepository.cs
+2.	IRepository -> Implement interface
+
+MyShop.WebUI
+1.	Edit -> App_Start -> Unity.config -> change InMemoryRepository -> SQLRepository
