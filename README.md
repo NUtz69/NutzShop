@@ -175,3 +175,17 @@ MyShop.DataAccess.SQL
 
 MyShop.WebUI
 1.	Edit -> App_Start -> Unity.config -> change InMemoryRepository -> SQLRepository
+
+GIT: 011.UploadingImages
+
+UploadingImages
+
+MyShop.WebUI
+1.	Edit -> Views -> ProductManger -> Create.cshtml -> Images
+2.	Edit -> Views -> ProductManger -> Create.cshtml -> @using (Html.BeginForm("Create", "ProductManager", FormMethod.Post, new { encType = "multipart/form-data" }))
+3.	Edit -> Views -> ProductManger -> Edit.cshtml -> the same
+4.	Mkdir ProductImages -> Content
+5.	Edit -> Views -> ProductManger -> Edit.cshtml -> Product
+6.	Edit -> Controllers -> ProductMangerControlle -> HttpPost -> Create
+7.	Edit -> Controllers -> ProductMangerControlle -> HttpPost -> Edit
+8.	Edit -> Views -> Index.cshtml -> table & Model -> & delete -> <td>@Html.DisplayFor(modelItem => item.Image)</td> 
