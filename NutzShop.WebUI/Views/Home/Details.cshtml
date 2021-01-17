@@ -1,0 +1,54 @@
+﻿@model NutzShop.Core.Models.Product
+
+@{
+    ViewBag.Title = Model.Name + "Details";
+}
+
+<h2>@Html.DisplayFor(model => model.Name)</h2>
+
+<div>
+    @*Img*@
+    <div class="col-md-2">
+        <img class="img-responsive" src="~/Content/ProductImages/@Model.Image" />
+    </div>
+
+    <div class="col-md-10">
+        <dl class="dl-horizontal">
+
+            @*Description*@
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            @*Price*@
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+
+            <dt></dt>
+
+            @*Add to basket*@
+            <dd>
+                <a href="#" class="btn btn-default">Add to Basket</a>
+            </dd>
+
+            <dt></dt>
+
+            @*Back to List*@
+            <dd>
+                @Html.ActionLink("Back to List", "Index")
+            </dd>
+        </dl>
+    </div>
+</div>
+
+@*clear*@
+<div class="col-md-12 clearfix" />
