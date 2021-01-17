@@ -189,3 +189,18 @@ MyShop.WebUI
 6.	Edit -> Controllers -> ProductMangerControlle -> HttpPost -> Create
 7.	Edit -> Controllers -> ProductMangerControlle -> HttpPost -> Edit
 8.	Edit -> Views -> Index.cshtml -> table & Model -> & delete -> <td>@Html.DisplayFor(modelItem => item.Image)</td> 
+
+GIT: 012.ProductListing
+
+ProductListing
+
+MyShop.WebUI
+1.	Edit -> Controllers -> ProductMangerController -> copy //var & //construtors -> HomeController
+2.	Edit -> Controllers -> HomeController
+3.	Edit -> Views -> Home -> Index.cshtml
+4.	Add View -> Details -> Model class = Product (MyShop.Core.Models)
+5.	Edit -> Views -> Home -> Details.cshtml
+
+MyShop.WebUI.Tests
+1.	Edit -> Controllers -> HomerControllerTest -> Index -> Comment out
+2.	Edit -> Controllers -> HomerControllerTest -> About & Contact -> Delete
