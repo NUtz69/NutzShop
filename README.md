@@ -204,3 +204,14 @@ MyShop.WebUI
 MyShop.WebUI.Tests
 1.	Edit -> Controllers -> HomerControllerTest -> Index -> Comment out
 2.	Edit -> Controllers -> HomerControllerTest -> About & Contact -> Delete
+
+GIT: 013.ProductFilter
+
+ProductFilter
+
+MyShop.Core
+1.	Add new class -> ViewModels -> ProductListViewModel
+
+MyShop.WebUI
+1.	Edit -> Controllers -> HomeController -> Index
+2.	Edit -> Views -> Home -> Index.cshtml
