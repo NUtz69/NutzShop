@@ -215,3 +215,21 @@ MyShop.Core
 MyShop.WebUI
 1.	Edit -> Controllers -> HomeController -> Index
 2.	Edit -> Views -> Home -> Index.cshtml
+
+GIT: 014.BasketModel
+
+BasketModel
+
+MyShop.Core
+1.	Add new class -> Model -> Basket.cs
+2.	Add new class -> Model -> BasketItem.cs
+
+
+MyShop.DataAccess.SQL
+1.	Edit -> DataContext.cs
+2.	MyShop.WebUI -> Set as startup project
+3.	Visual studio -> View -> Other windows -> Package manager console
+4.	Default project: NutzShop.DataAccess.SQL
+5.	Add-Migration AddBasket
+6.	Update-Database
+7.	SQL Sever Management Studio -> Databases -> Tables -> Edit
