@@ -233,3 +233,12 @@ MyShop.DataAccess.SQL
 5.	Add-Migration AddBasket
 6.	Update-Database
 7.	SQL Sever Management Studio -> Databases -> Tables -> Edit
+
+GIT: 015.BasketService
+
+BasketService
+
+NutzShop.Services
+1.	Reference -> Add -> NutzShop.Core
+2.	Add new class -> Model -> BasketService.cs
+3.	Reference -> Add -> Assemblies -> System.Web
