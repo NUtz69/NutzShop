@@ -242,3 +242,21 @@ NutzShop.Services
 1.	Reference -> Add -> NutzShop.Core
 2.	Add new class -> Model -> BasketService.cs
 3.	Reference -> Add -> Assemblies -> System.Web
+
+NutzShop.Core
+1.	MyShop.Core -> ViewModels -> Add new class -> BasketItemViewModel.cs
+
+NutzShop.Services
+1.	Edit -> BasketService.cs
+
+NutzShop.Core
+1.	MyShop.Core -> ViewModels -> Add new class -> BasketSummaryViewModel.cs
+
+NutzShop.Services
+1.	Edit -> BasketService.cs
+
+NutzShop.Core
+1.	Contract -> Add new class -> Interface -> IBasket.Service.cs
+
+NutzShop.Services
+1.	Edit -> BasketService.cs -> Extracts Interface
