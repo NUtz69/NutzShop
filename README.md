@@ -260,3 +260,20 @@ NutzShop.Core
 
 NutzShop.Services
 1.	Edit -> BasketService.cs -> Extracts Interface
+
+GIT: 016.BasketUI
+
+BasketUI
+
+NutzShop.WebUI
+1.	Edit -> App_Start -> UnityConfig.cs
+2.	Controllers -> Add Controllers -> MVC 5 Controller – Empty -> BasketController
+3.	Edit -> Controllers -> BasketController.cs
+4.	Index -> Add view -> Template = List -> Model class = BasketItemViewModel (NutzShop.Core.ViewModels)
+5.	Edit -> Views -> Basket -> Index.cshtml
+6.	View -> Basket -> Add view -> View name -> BasketSummary -> Empty -> Create as a partial view
+7.	Edit -> Views -> Basket -> BasketSummary.cshtml
+8.	Edit -> Views -> Home -> Index.cshtml
+9.	Edit -> Views -> Home -> Details.cshtml
+10.	Edit -> Views -> Shared -> _Layout.cshtml
+
