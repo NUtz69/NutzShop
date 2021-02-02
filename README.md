@@ -277,3 +277,27 @@ NutzShop.WebUI
 9.	Edit -> Views -> Home -> Details.cshtml
 10.	Edit -> Views -> Shared -> _Layout.cshtml
 
+GIT: 017.BasketTests
+
+BasketTests
+
+NutzShop.WebUI.Tests
+
+Creating Mocks
+1.	Edit -> Controllers -> HomeControllerTest.cs
+2.	Add -> New floder -> Mocks
+3.	Mocks -> Add new class -> MockContext.cs
+3.	Edit -> MockContext.cs
+4.	Reference -> Add -> All
+5.	Copy -> NutzShop.DataAccess.InMemory -> InMemoryRepository.cs -> to MockContext.cs
+6.	Edit -> MockContext.cs
+7.	Edit -> HomeControllerTest.cs
+8.	Visual Studio -> Test -> Test Explorer
+9.	Mocks -> Add new class -> MockHttpContext.cs
+10.	Edit -> MockHttpContext.cs
+11.	Add -> Controllers -> Unit Test -> BasketControllerTests.cs
+12.	Edit -> BasketControllerTests.cs
+
+Basket tests
+13.	Edit -> Controllers -> BasketControllerTest.cs
+
