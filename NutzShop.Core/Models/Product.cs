@@ -17,7 +17,6 @@ namespace NutzShop.Core.Models
         public string Description { get; set; }
 
         [Range(0, 1000)]
-        [DisplayFormat(DataFormatString = "{0:N}")]
         public decimal Price { get; set; }
 
         public string Category { get; set; }
