@@ -79,6 +79,19 @@ namespace NutzShop.WebUI.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        // Customers
+        [Required]
+        public string FirstName { get; set; }
+        [Required]
+        public string LastName { get; set; }
+        [Required]
+        public string Street { get; set; }
+        [Required]
+        public string City { get; set; }
+        public string State { get; set; }
+        [Required]
+        public string Code { get; set; }
     }
 
     public class ResetPasswordViewModel
@@ -99,6 +112,17 @@ namespace NutzShop.WebUI.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
+        // Customers
+        [Required]
+        public string FirstName { get; set; }
+        [Required]
+        public string LastName { get; set; }
+        [Required]
+        public string Street { get; set; }
+        [Required]
+        public string City { get; set; }
+        public string State { get; set; }
+        [Required]
         public string Code { get; set; }
     }
 
