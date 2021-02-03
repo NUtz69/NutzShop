@@ -302,3 +302,26 @@ Basket tests
 
 13.	Edit -> Controllers -> BasketControllerTest.cs
 
+GIT: 018.CustomerModels
+
+CustomerModels
+
+NutzShop.Core
+1.	Add new class -> Model -> Customer.cs
+2.	Edit -> Customer.cs
+
+MyShop.DataAccess.SQL
+1.	Edit -> DataContext.cs
+2.	--
+3.	Visual studio -> View -> Other windows -> Package manager console
+4.	Default project: NutzShop.DataAccess.SQL
+5.	Add-Migration AddCustomers
+6.	Update-Database
+
+NutzShop.WebUI
+1.	Edit -> Models -> AccountViewModels.cs -> RegisterViewModel
+2.	Edit -> Controllers -> AccountController.cs -> Register(RegisterViewModel) & Authorize
+3.	Edit -> View -> Account -> Register.cshtml
+4.	Update -> Controllers -> AccountController.cs -> Authorize
+5.	Update -> App_Strat -> Unity.Config.cs
+6.	Remove -> Constructors -> AccountController & ManageController
