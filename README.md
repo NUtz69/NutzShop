@@ -325,3 +325,53 @@ NutzShop.WebUI
 4.	Update -> Controllers -> AccountController.cs -> Authorize
 5.	Update -> App_Strat -> Unity.Config.cs
 6.	Remove -> Constructors -> AccountController & ManageController
+
+GIT: 019.OrderModels
+
+OrderModels
+
+NutzShop.Core
+1.	Add new class -> Model -> OrderItem.cs
+2.	Edit -> OrderItem.cs
+3.	Add new class -> Model -> Order.cs
+4.	Edit -> Order.cs
+
+MyShop.DataAccess.SQL
+1.	Edit -> DataContext.cs
+2.	--
+3.	Visual studio -> View -> Other windows -> Package manager console
+4.	Default project: NutzShop.DataAccess.SQL
+5.	Add-Migration AddOrders
+6.	Update-Database
+
+NutzShop.Core
+1.	Contract -> Add new class -> Interface -> IOrderService.cs
+2.	Edit -> IOrderService.cs
+
+NutzShop.Services
+1.	Add new class -> OrderService.cs
+
+NutzShop.WebUI
+1.	Edit -> App_Start -> UnityConfig.cs
+
+NutzShop.Services
+1.	Edit -> BasketService.cs
+
+NutzShop.Core
+1.	Edit -> Contract -> IBasketService.cs
+
+NutzShop.WebUI
+1.	Edit -> Controller -> BasketController.cs
+
+NutzShop.WebUI.Tests
+1.	Edit -> Controllers -> BasketControllerTest.cs
+
+NutzShop.WebUI
+1.	Controller -> BasketController.cs
+2.	Add View -> Checkout() -> Create -> Model class = Order (MyShop.Core.Models)
+3.	Edit -> Checkout.cshtml
+4.	Add View -> Thankyou() -> Empty
+5.	Edit -> Thankyou.cshtml
+
+NutzShop.WebUI
+1.	Edit -> Views -> Basket -> Index.cshtml
