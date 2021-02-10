@@ -170,5 +170,14 @@ namespace NutzShop.Services
                 return model;
             }
         }
+
+        // Clear basket
+        public void ClearBasket(HttpContextBase httpContext)
+        {
+            Basket basket = GetBasket(httpContext, false);
+            basket.BasketItems.Clear();
+            // Commit
+            basketContext.Commit();
+        }
     }
 }
