@@ -22,5 +22,7 @@ namespace NutzShop.DataAccess.SQL
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<BasketItem> BasketItems { get; set; }
         public DbSet<Customer> Customers { get; set; } // Customers
+        public DbSet<Order> Orders { get; set; } // Orders
+        public DbSet<OrderItem> OrdersItems { get; set; } // OrdersItems
     }
 }

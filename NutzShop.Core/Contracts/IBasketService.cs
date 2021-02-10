@@ -18,5 +18,7 @@ namespace NutzShop.Core.Contracts
         List<BasketItemViewModel> GetBasketItems(HttpContextBase httpContext);
         // BasketSummaryViewModel
         BasketSummaryViewModel GetBasketSummary(HttpContextBase httpContext);
+        // Clear basket
+        void ClearBasket(HttpContextBase httpContext);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using NutzShop.Core.Contracts;
+using NutzShop.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,13 @@ namespace NutzShop.WebUI.Controllers
     {
         // Var
         IBasketService basketService;
+        IOrderService orderService; // Order
 
         // Constructors
-        public BasketController(IBasketService BasketService)
+        public BasketController(IBasketService BasketService, IOrderService OrderService)
         {
             this.basketService = BasketService;
+            this.orderService = OrderService;
         }
 
         // GET: Basket
@@ -49,6 +52,35 @@ namespace NutzShop.WebUI.Controllers
             var basketSummary = basketService.GetBasketSummary(this.HttpContext);
 
             return PartialView(basketSummary);
+        }
+
+        /* Order */
+
+        // Check Out
+        public ActionResult Checkout()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Checkout(Order order)
+        {
+            var basketItems = basketService.GetBasketItems(this.HttpContext);
+            order.OrderStatus = "Order Created";
+
+            // Process payment
+            order.OrderStatus = "Payment Processed";
+            orderService.CreateOrder(order, basketItems);
+            basketService.ClearBasket(this.HttpContext);
+
+            return RedirectToAction("Thankyou", new { OrderId = order.Id}); // Thankyou
+        }
+
+        // Thank You
+        public ActionResult Thankyou(string OrderId)
+        {
+            ViewBag.OrderId = OrderId;
+            return View();
         }
     }
 }
