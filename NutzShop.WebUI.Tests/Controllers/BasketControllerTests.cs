@@ -7,6 +7,7 @@ using NutzShop.WebUI.Controllers;
 using NutzShop.WebUI.Tests.Mocks;
 using System;
 using System.Linq;
+using System.Security.Principal;
 using System.Web.Mvc;
 
 namespace NutzShop.WebUI.Tests.Controllers
@@ -22,6 +23,7 @@ namespace NutzShop.WebUI.Tests.Controllers
             IRepository<Basket> baskets = new MockContext<Basket>();
             IRepository<Product> products = new MockContext<Product>();
             IRepository<Order> orders = new MockContext<Order>(); // Order
+            IRepository<Customer> customers = new MockContext<Customer>(); // Customer
 
             // MockContext
             var httpContext = new MockHttpContext();
@@ -29,7 +31,7 @@ namespace NutzShop.WebUI.Tests.Controllers
             // Service
             IBasketService basketService = new BasketService(products, baskets);
             IOrderService orderService = new OrderService(orders); // Order
-            var controller = new BasketController(basketService, orderService);
+            var controller = new BasketController(basketService, orderService, customers);
             controller.ControllerContext = new System.Web.Mvc.ControllerContext(httpContext, new System.Web.Routing.RouteData(), controller);
 
             // Act - Add something to the basket
@@ -53,6 +55,7 @@ namespace NutzShop.WebUI.Tests.Controllers
             IRepository<Basket> baskets = new MockContext<Basket>();
             IRepository<Product> products = new MockContext<Product>();
             IRepository<Order> orders = new MockContext<Order>(); // Order
+            IRepository<Customer> customers = new MockContext<Customer>(); // Customer
 
             // GetSummary
             products.Insert(new Product() { Id = "1", Price = 10.00m }); // Products DB
@@ -67,7 +70,7 @@ namespace NutzShop.WebUI.Tests.Controllers
             // Service
             IBasketService basketService = new BasketService(products, baskets);
             IOrderService orderService = new OrderService(orders); // Order
-            var controller = new BasketController(basketService, orderService);
+            var controller = new BasketController(basketService, orderService, customers);
 
             // MockContext
             var httpContext = new MockHttpContext();
@@ -90,6 +93,7 @@ namespace NutzShop.WebUI.Tests.Controllers
         public void CanCheckoutAndCreateOrder()
         {
             // Product
+            IRepository<Customer> customers = new MockContext<Customer>(); // Customer
             IRepository<Product> products = new MockContext<Product>();
             products.Insert(new Product() { Id = "1", Price = 10.00m });
             products.Insert(new Product() { Id = "2", Price = 5.00m });
@@ -108,12 +112,17 @@ namespace NutzShop.WebUI.Tests.Controllers
             IRepository<Order> orders = new MockContext<Order>();
             IOrderService orderService = new OrderService(orders);
 
+            // Customer
+            customers.Insert(new Customer() { Id="1", Email="nutz@nutz.be", Code="7850" });
+            IPrincipal FakeUser = new GenericPrincipal(new GenericIdentity("nutz@nutz.be", "Forms"), null); // Db
+
             // Controller
-            var controller = new BasketController(basketService, orderService);
+            var controller = new BasketController(basketService, orderService, customers);
             // Fake context cookies
             var httpContext = new MockHttpContext();
             // Manually cookie
-            httpContext.Request.Cookies.Add(new System.Web.HttpCookie("eCommerceBasket") { Value = basket.Id });
+            httpContext.User = FakeUser; // Customer
+            httpContext.Request.Cookies.Add(new System.Web.HttpCookie("eCommerceBasket") { Value = basket.Id });         
             // Finally
             controller.ControllerContext = new ControllerContext(httpContext, new System.Web.Routing.RouteData(), controller);
 
