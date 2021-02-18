@@ -375,3 +375,17 @@ NutzShop.WebUI
 
 NutzShop.WebUI
 1.	Edit -> Views -> Basket -> Index.cshtml
+
+GIT: 020.LinkedCustomer
+
+LinkedCustomer
+
+NutzShop.WebUI
+1.	Edit -> Controller -> BasketController.cs
+2.	Edit -> Views -> Basket -> Checkout.cshtml -> remove email
+3.	Edit -> Controller -> BasketController.cs -> httpPost - Checkout
+
+NutzShop.WebUI.Tests
+1.	Edit -> Controller -> BasketControllerTests.cs
+2.	Edit -> Mocks -> MockHttpContext.cs
+3.	Edit -> Controller -> BasketControllerTests.cs -> CanCheckoutAndCreateOrder
