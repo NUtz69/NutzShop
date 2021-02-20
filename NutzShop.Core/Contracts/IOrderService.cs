@@ -12,5 +12,10 @@ namespace NutzShop.Core.Contracts
     {
         // CreateOrder
         void CreateOrder(Order baseOrder, List<BasketItemViewModel> basketItems);
+
+        // Admin
+        List<Order> GetOrdersList();
+        Order GetOrder(string Id);
+        void UpdateOrder(Order updateOrder);
     }
 }
