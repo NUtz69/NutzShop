@@ -389,3 +389,34 @@ NutzShop.WebUI.Tests
 1.	Edit -> Controller -> BasketControllerTests.cs
 2.	Edit -> Mocks -> MockHttpContext.cs
 3.	Edit -> Controller -> BasketControllerTests.cs -> CanCheckoutAndCreateOrder
+
+GIT: 021.OrderManager
+
+OrderManager
+
+NutzShop.WebUI
+1.	Controllers -> Add Controllers -> MVC 5 Controller – Empty -> AdminController
+2.	Edit -> AdminController.cs
+3.	Add View -> Index -> Empty
+4.	Edit -> Views -> Admin -> Index.cshtml
+5.	Edit -> Views -> Shared -> _Layout.cshtml
+
+NutzShop.Services
+1.	Edit -> OrderService.cs
+
+NutzShop.Core
+1.	Edit -> Contract -> IOrderService.cs
+
+NutzShop.WebUI
+1.	Controllers -> Add Controllers -> MVC 5 Controller – Empty -> OrderManagerController
+2.	Edit -> OrderManagerController.cs
+6.	Add View -> Index -> List -> Model class = Order (MyShop.Core.Models)
+7.	Edit -> Views -> OrderManager -> Index.cshtml
+8.	Add View -> UpdateOrder -> Edit -> Model class = Order (MyShop.Core.Models)
+9.	Edit -> Views -> OrderManager -> UpdateOrder.cshtml
+3.	Edit -> OrderManagerController.cs -> UpdateOrder
+4.	Edit -> Views -> OrderManager -> UpdateOrder.cshtml -> OrderStatus
+10.	View -> OrderManager -> Add View -> OrderItems -> list -> Model class = OrderItem (MyShop.Core.Models)
+11.	Edit -> Views -> OrderManager -> OrderItems.cshtml
+12.	Edit -> Views -> OrderManager -> UpdateOrder.cshtml
+13.	Edit -> Views -> OrderManager -> OrderItems.cshtml
