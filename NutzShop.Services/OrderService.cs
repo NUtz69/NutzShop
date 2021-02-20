@@ -24,7 +24,7 @@ namespace NutzShop.Services
         {
             foreach (var item in basketItems)
             {
-                baseOrder.OrderItems.Add(new OrderItem() 
+                baseOrder.OrderItems.Add(new OrderItem()
                 {
                     ProductId = item.Id,
                     Image = item.Image,
@@ -37,5 +37,28 @@ namespace NutzShop.Services
             orderContext.Insert(baseOrder);
             orderContext.Commit();
         }
+
+        /* Admin */
+
+        // List order
+        public List<Order> GetOrdersList()
+        {
+            return orderContext.Collection().ToList();
+        }
+
+        // One order
+        public Order GetOrder(string Id)
+        {
+            return orderContext.Find(Id);
+        }
+
+        // Update order
+        public void UpdateOrder(Order updateOrder)
+        {
+            orderContext.Update(updateOrder);
+            orderContext.Commit();
+        }
+
+
     }
 }
