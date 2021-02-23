@@ -18,6 +18,7 @@ namespace NutzShop.WebUI.Controllers
 
         public ManageController()
         {
+            //_userManager.AddToRole("ID", "Admin"); // Roles
         }
 
         public ApplicationSignInManager SignInManager
