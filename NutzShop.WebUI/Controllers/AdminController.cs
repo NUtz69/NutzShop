@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace NutzShop.WebUI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         // GET: Admin

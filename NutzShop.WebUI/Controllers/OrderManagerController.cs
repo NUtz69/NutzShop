@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace NutzShop.WebUI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class OrderManagerController : Controller
     {
         // Var

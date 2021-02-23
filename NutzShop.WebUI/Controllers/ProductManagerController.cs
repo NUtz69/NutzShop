@@ -11,6 +11,7 @@ using NutzShop.DataAccess.InMemory;
 
 namespace NutzShop.WebUI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ProductManagerController : Controller
     {
         // Var
