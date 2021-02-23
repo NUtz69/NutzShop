@@ -420,3 +420,39 @@ NutzShop.WebUI
 11.	Edit -> Views -> OrderManager -> OrderItems.cshtml
 12.	Edit -> Views -> OrderManager -> UpdateOrder.cshtml
 13.	Edit -> Views -> OrderManager -> OrderItems.cshtml
+
+GIT: 022.SecuringAdmin
+
+SecuringAdmin
+
+NutzShop.WebUI
+1.	Edit -> Controllers -> AdminController.cs
+
+SQL.Server
+1.	NutzShop -> Tables -> dbo.AspNetRoles -> Script table as -> INSERT TO -> New query editor windows
+2.	Edit -> VALUES
+3.	           	(NEWID()
+4.	           	,'Admin')
+5.	Execute
+6.	dbo.AspNetRoles -> Edit -> copy ID
+7.	Edit -> dbo.AspNetUserRoles -> paste ID -> Roleld
+8.	dbo.AspNetUsers -> Edit -> copy ID
+9.	Edit -> dbo.AspNetUserRoles -> paste ID -> UserId
+10.	---
+11.	Schemas
+12.	Google -> https://docs.microsoft.com/en-us/dotnet/api/system.security.claims.claimtypes?view=net-5.0 -> Role -> Copy
+13.	---
+14.	New -> dbo.AspNetUserClaims
+15.	NutzShop -> Tables -> dbo.AspNetUserClaims -> Script table as -> INSERT TO -> New query editor windows
+16.	Edit -> dbo.AspNetUserClaims
+17.	Execute
+18.	Show -> dbo.AspNetUserClaims
+19.	Edit -> dbo.AspNetRoles -> remove - 1
+
+NutzShop.WebUI
+1.	Edit -> Controllers -> AdminController.cs -> [Authorize(Roles = "Admin")]
+2.	Edit -> Controllers -> OrderManagerController.cs
+3.	Edit -> Controllers -> ProductCategoryController.cs
+4.	Edit -> Controllers -> ProductManagerController.cs
+5.	Edit -> Controllers -> ManageController.cs -> public ManageController() -> role
+6.	Edit -> Views -> Shared -> _Layout.cshtml
